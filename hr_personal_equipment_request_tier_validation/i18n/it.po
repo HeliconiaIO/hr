@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-02-20 16:36+0000\n"
+"PO-Revision-Date: 2025-02-15 11:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: hr_personal_equipment_request_tier_validation
 #: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__can_review
@@ -22,27 +22,14 @@ msgid "Can Review"
 msgstr "Può revisionare"
 
 #. module: hr_personal_equipment_request_tier_validation
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__display_name
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_tier_definition__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: hr_personal_equipment_request_tier_validation
 #: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__has_comment
 msgid "Has Comment"
 msgstr "Ha commenti"
 
 #. module: hr_personal_equipment_request_tier_validation
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__id
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_tier_definition__id
-msgid "ID"
-msgstr "ID"
-
-#. module: hr_personal_equipment_request_tier_validation
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request____last_update
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_tier_definition____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
+#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__is_reevaluation_required
+msgid "Is Reevaluation Required"
+msgstr "È richiesta la rivalutazione"
 
 #. module: hr_personal_equipment_request_tier_validation
 #: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__need_validation
@@ -86,11 +73,6 @@ msgid "Tier Definition"
 msgstr "Definizione livello"
 
 #. module: hr_personal_equipment_request_tier_validation
-#: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__tier_validation_before_write
-msgid "Tier Validation Before Write"
-msgstr "Livello validazione prima della scrittura"
-
-#. module: hr_personal_equipment_request_tier_validation
 #: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__to_validate_message
 msgid "To Validate Message"
 msgstr "Messaggio per 'Da validare'"
@@ -114,3 +96,15 @@ msgstr "Stato validazione"
 #: model:ir.model.fields,field_description:hr_personal_equipment_request_tier_validation.field_hr_personal_equipment_request__review_ids
 msgid "Validations"
 msgstr "Validazioni"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Tier Validation Before Write"
+#~ msgstr "Livello validazione prima della scrittura"
