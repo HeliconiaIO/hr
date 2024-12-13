@@ -2,3 +2,4 @@
   - Pedro M. Baeza
   - Víctor Martínez
   - Juan José Seguí
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`_
