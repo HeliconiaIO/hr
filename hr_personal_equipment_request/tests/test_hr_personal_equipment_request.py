@@ -10,36 +10,42 @@ class TestHRPersonalEquipmentRequest(TransactionCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.product_personal_equipment_1 = cls.env["product.template"].create(
-            {
-                "name": "Product Test Personal Equipment 1",
-                "is_personal_equipment": True,
-                "uom_id": cls.env.ref("uom.product_uom_unit").id,
-            }
+            [
+                {
+                    "name": "Product Test Personal Equipment 1",
+                    "is_personal_equipment": True,
+                    "uom_id": cls.env.ref("uom.product_uom_unit").id,
+                }
+            ]
         )
         cls.product_personal_equipment_2 = cls.env["product.template"].create(
-            {
-                "name": "Product Test Personal Equipment 2",
-                "is_personal_equipment": True,
-                "uom_id": cls.env.ref("uom.product_uom_unit").id,
-            }
+            [
+                {
+                    "name": "Product Test Personal Equipment 2",
+                    "is_personal_equipment": True,
+                    "uom_id": cls.env.ref("uom.product_uom_unit").id,
+                }
+            ]
         )
         cls.user = (
             cls.env["res.users"]
             .sudo()
             .create(
-                {
-                    "name": "Test User",
-                    "login": "user@test.com",
-                    "email": "user@test.com",
-                    "groups_id": [
-                        (4, cls.env.ref("base.group_user").id),
-                        (4, cls.env.ref("hr.group_hr_user").id),
-                    ],
-                }
+                [
+                    {
+                        "name": "Test User",
+                        "login": "user@test.com",
+                        "email": "user@test.com",
+                        "groups_id": [
+                            (4, cls.env.ref("base.group_user").id),
+                            (4, cls.env.ref("hr.group_hr_user").id),
+                        ],
+                    }
+                ]
             )
         )
         cls.employee = cls.env["hr.employee"].create(
-            {"name": "Employee Test", "user_id": cls.user.id}
+            [{"name": "Employee Test", "user_id": cls.user.id}]
         )
 
         lines = [
@@ -59,11 +65,13 @@ class TestHRPersonalEquipmentRequest(TransactionCase):
             cls.env["hr.personal.equipment.request"]
             .with_user(cls.user.id)
             .create(
-                {
-                    "name": "Personal Equipment Request Test",
-                    "employee_id": cls.employee.id,
-                    "line_ids": [(0, 0, line) for line in lines],
-                }
+                [
+                    {
+                        "name": "Personal Equipment Request Test",
+                        "employee_id": cls.employee.id,
+                        "line_ids": [(0, 0, line) for line in lines],
+                    }
+                ]
             )
         )
 
