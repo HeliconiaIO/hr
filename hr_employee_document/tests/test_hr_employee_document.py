@@ -26,10 +26,10 @@ class TestHrEmployeeDocument(common.TransactionCase):
         cls.user_2 = new_test_user(cls.env, login="test-user-2")
         new_test_user(cls.env, login="test-user-manager", groups="hr.group_hr_user")
         cls.employee_1 = cls.env["hr.employee"].create(
-            {"name": "Employee #1", "user_id": cls.user_1.id}
+            [{"name": "Employee #1", "user_id": cls.user_1.id}]
         )
         cls.employee_2 = cls.env["hr.employee"].create(
-            {"name": "Employee #2", "user_id": cls.user_2.id}
+            [{"name": "Employee #2", "user_id": cls.user_2.id}]
         )
 
     @classmethod
@@ -38,12 +38,15 @@ class TestHrEmployeeDocument(common.TransactionCase):
             self.env["ir.attachment"]
             .sudo()
             .create(
-                {
-                    "res_model": employee_id._name,
-                    "res_id": employee_id.id,
-                    "datas": base64.b64encode(b"My attachment"),
-                    "name": "doc.txt",
-                }
+                [
+                    {
+                        "res_model": employee_id._name,
+                        "res_id": employee_id.id,
+                        "datas": base64.b64encode(b"My attachment"),
+                        "name": "doc.txt",
+                        "public": True,
+                    }
+                ]
             )
         )
 
