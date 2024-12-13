@@ -416,7 +416,7 @@ class TestHrEmployeeCalendarPlanning(common.TransactionCase):
     def test_employee_with_calendar_ids(self):
         employee = self.env["hr.employee"].create(
             {
-                "name": "Test employee calendar planning",
+                "name": "Test employee",
                 "calendar_ids": [
                     (
                         0,
