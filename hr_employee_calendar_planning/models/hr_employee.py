@@ -104,8 +104,7 @@ class HrEmployee(models.Model):
                         "active": False,
                         "company_id": self.company_id.id,
                         "auto_generate": True,
-                        "name": _("Auto generated calendar for employee")
-                        + " %s" % self.name,
+                        "name": _(f"Auto generated calendar for employee {self.name}"),
                         "attendance_ids": vals_list,
                         "two_weeks_calendar": two_weeks,
                         "tz": self.tz,  # take employee timezone as default
